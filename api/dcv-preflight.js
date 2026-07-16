@@ -47,7 +47,7 @@ export default async function handler(req, res) {
           id: 'http01',
           status: 'pass',
           title: 'Port 80 reachable',
-          detail: 'The server answered on port 80 (HTTP ' + r.status + ' for a test path — a 404 here is expected and fine). HTTP-01 validation should work.'
+          detail: 'The server answered on port 80 (HTTP ' + r.status + ' for a test path — a 404 here is expected and fine). HTTP-01 validation can work — but only if this server is yours. If you don’t control the machine at this IP, the CA’s challenge file can’t be placed there; use DNS validation instead.'
         })
       }
     } catch {
